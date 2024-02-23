@@ -54,33 +54,24 @@ template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i
 template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
  
-/*************************** MY CP TAMPLATE END HERE *************************/
-void solution()
-{
+/*************************** MY CP TAMPLATE END HERE *************************/ 
+ vector<ll>v(200005);
+ ll digitSum(ll num) {
+    ll sum = 0;
+    while (num > 0) {
+        sum += num % 10;
+        num /= 10;
+    }
+    return sum;
+}
 
+void solution() {
     ll n;
     cin >> n;
-    vector<ll> a(n);
-    for (ll i = 0; i < n; ++i)
-    {
-        cin >> a[i];
-    }
-    ll num = 1;
 
-    for (int i =0; i <n; i++)
-    {
-        a[i] = a[i] + num;
-        num++;
-    }
-    sort(a);
-    reverse(a);
-    debug(a);
-    for (auto it : a)
-    {
-        cout << it << " ";
-    }
-    cout << endl;
+    cout << v[n] << endl;
 }
+
 
 int main() {
 #ifndef ONLINE_JUDGE 
@@ -90,7 +81,11 @@ fastio();
 
 /********** YOUR CODE START HERE  ***********/
   
-  ll t; cin>>t; 
+  ll t; cin>>t;  
+  v[0] = 0; 
+  for(ll i=1; i<v.size(); i++){
+    v[i] = v[i-1]+digitSum(i);
+  }
   while(t--){ solution();} 
 
 //  solution();

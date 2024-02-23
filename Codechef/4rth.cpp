@@ -54,33 +54,11 @@ template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i
 template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
  
-/*************************** MY CP TAMPLATE END HERE *************************/
-void solution()
-{
-
-    ll n;
-    cin >> n;
-    vector<ll> a(n);
-    for (ll i = 0; i < n; ++i)
-    {
-        cin >> a[i];
-    }
-    ll num = 1;
-
-    for (int i =0; i <n; i++)
-    {
-        a[i] = a[i] + num;
-        num++;
-    }
-    sort(a);
-    reverse(a);
-    debug(a);
-    for (auto it : a)
-    {
-        cout << it << " ";
-    }
-    cout << endl;
-}
+/*************************** MY CP TAMPLATE END HERE *************************/ 
+//problem -> Arya In Grid
+void solution(){
+ 
+} 
 
 int main() {
 #ifndef ONLINE_JUDGE 
@@ -91,9 +69,28 @@ fastio();
 /********** YOUR CODE START HERE  ***********/
   
   ll t; cin>>t; 
-  while(t--){ solution();} 
+  while(t--){  
+     ll n,m,x,y,l;
+      cin >> n >> m >> x >> y >> l; 
+
+      ll  row = 1;
+      ll  col = 1; 
+      
+      if(l==1) {
+          cout << n*m<<endl;
+          continue;
+      } 
+
+      row += (x-1)/l + (n-x)/l;
+      col += (y-1)/l + (m-y)/l; 
+
+      cout << row*col <<endl;
+  } 
 
 //  solution();
 
  return 0;
 }
+ 
+
+ 

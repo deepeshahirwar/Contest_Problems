@@ -55,31 +55,43 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
  
 /*************************** MY CP TAMPLATE END HERE *************************/
-void solution()
-{
-
-    ll n;
-    cin >> n;
+void solution(){
+    ll n, m;
+    cin >> n >> m;
     vector<ll> a(n);
-    for (ll i = 0; i < n; ++i)
-    {
+    ll product = 1;
+    for (ll i = 0; i < n; ++i) {
         cin >> a[i];
-    }
-    ll num = 1;
+        product *= a[i];
+    } 
+    string s; cin>>s; 
 
-    for (int i =0; i <n; i++)
-    {
-        a[i] = a[i] + num;
-        num++;
+    if(n==1 && m==1){
+        cout<<a[0]<<endl;
+    }else{
+    vector<ll> ans(n);
+
+    ll i = 0;
+    ll l=0, r=n-1;
+    while (i < n) {
+        ans[i] = (product % m);
+        if (s[i]== 'L' ) {
+            ll left = a[l++];
+             product = product / left;
+           
+        } if (s[i] == 'R') {
+            ll right = a[r--];
+            product = product / right;
+        }
+        i++;
     }
-    sort(a);
-    reverse(a);
-    debug(a);
-    for (auto it : a)
-    {
+
+    for (auto it : ans) {
         cout << it << " ";
+    } 
     }
-    cout << endl;
+    cout << endl; 
+    
 }
 
 int main() {

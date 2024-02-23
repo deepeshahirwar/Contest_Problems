@@ -55,32 +55,32 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
  
 /*************************** MY CP TAMPLATE END HERE *************************/
-void solution()
-{
+void solution(){
+  ll n; cin>>n; 
+   vector<int>ans; 
+   string s; 
+   for(int i=0; i<n; i++){ 
+     cin>>s; 
+     int cnt =0;
+     for(int j=0; j<n; j++){
+        if(s[j] == '1')cnt++;
+     } 
 
-    ll n;
-    cin >> n;
-    vector<ll> a(n);
-    for (ll i = 0; i < n; ++i)
-    {
-        cin >> a[i];
-    }
-    ll num = 1;
+      if(cnt != 0){
+        ans.push_back(cnt);
+      } 
 
-    for (int i =0; i <n; i++)
-    {
-        a[i] = a[i] + num;
-        num++;
-    }
-    sort(a);
-    reverse(a);
-    debug(a);
-    for (auto it : a)
-    {
-        cout << it << " ";
-    }
-    cout << endl;
-}
+   }
+   
+
+  if( ans[0] == ans[1]){
+    cout<<"SQUARE"<<endl;
+  }else{
+    cout<<"TRIANGLE"<<endl;
+  }
+
+  
+} 
 
 int main() {
 #ifndef ONLINE_JUDGE 
