@@ -1,0 +1,1 @@
+{"name":"Local: A_yugrt_sale","url":"d:\\All_Contest\\Contest_Problems\\Codeforces\\A_yugrt_sale.cpp","tests":[{"id":1712587934502,"input":"4\n2 5 9\n3 5 9\n3 5 11\n4 5 11\n","output":"9\n14\n15\n20\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\All_Contest\\Contest_Problems\\Codeforces\\A_yugrt_sale.cpp","group":"local","local":true}
