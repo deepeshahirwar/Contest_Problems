@@ -1,1 +1,0 @@
-{"name":"Local: E_Bucket_Game","url":"d:\\All_Contest\\Contest_Problems\\Codechef\\E_Bucket_Game.cpp","tests":[{"id":1710346805685,"input":"2\n3\n2 2 2\n4\n3 4 6 4","output":"alice\nbob"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\All_Contest\\Contest_Problems\\Codechef\\E_Bucket_Game.cpp","group":"local","local":true}

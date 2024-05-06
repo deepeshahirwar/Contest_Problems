@@ -1,1 +1,0 @@
-{"name":"Local: D_make_equal","url":"d:\\All_Contest\\Contest_Problems\\Codechef\\D_make_equal.cpp","tests":[{"id":1713368206606,"input":"3\n1\n1\n4\n1 3 2 1\n7\n2 4 5 1 4 5 3","output":"YES\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\All_Contest\\Contest_Problems\\Codechef\\D_make_equal.cpp","group":"local","local":true}

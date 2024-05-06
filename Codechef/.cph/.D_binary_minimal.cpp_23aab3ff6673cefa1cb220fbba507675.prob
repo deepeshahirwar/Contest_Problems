@@ -1,1 +1,0 @@
-{"name":"Local: D_binary_minimal","url":"d:\\All_Contest\\Contest_Problems\\Codechef\\D_binary_minimal.cpp","tests":[{"id":1710342838607,"input":"2\n3 1\n000\n2 0\n11","output":"00\n11"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\All_Contest\\Contest_Problems\\Codechef\\D_binary_minimal.cpp","group":"local","local":true}

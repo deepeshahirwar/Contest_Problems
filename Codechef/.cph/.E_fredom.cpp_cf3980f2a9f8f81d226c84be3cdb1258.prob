@@ -1,1 +1,0 @@
-{"name":"Local: E_fredom","url":"d:\\All_Contest\\Contest_Problems\\Codechef\\E_fredom.cpp","tests":[{"id":1710948843226,"input":"2\n3\n1 3 9\n5\n2 1 8 6 2","output":"0\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\All_Contest\\Contest_Problems\\Codechef\\E_fredom.cpp","group":"local","local":true}
