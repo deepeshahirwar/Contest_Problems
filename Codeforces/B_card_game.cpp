@@ -1,6 +1,7 @@
 /***************************  DEEPESH AHIRWAR *********************************/ 
 
 #include<bits/stdc++.h>
+#include <fstream>
 
 using namespace std; 
 
@@ -55,19 +56,36 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
  
 /*************************** MY CP TAMPLATE END HERE *************************/
-void solution(){
-  
-  int num1,num2;
-  cin>>num1>>num2; 
-  cout<<max(num1,num2)<<endl;
  
+ int f(int a, int b){
+    if(a==b)return 0; 
+    if(a>b)return 1; 
+    return -1;
+ }
+void solution(){
+  int a1, a2, b1, b2; 
+  cin >> a1 >> a2 >> b1 >> b2;
+   
+   int swin =0; 
+    
+    if(f(a1, b1) + f(a2, b2) > 0)swin++; 
+    if(f(a1, b2) + f(a2, b1) > 0)swin++;
+    if(f(a2, b1) + f(a1, b2) > 0)swin++; 
+    if(f(a2, b2) + f(a1, b1) > 0)swin++;
+
+   
+   
+  cout << swin << endl;
+
+  
 
 } 
 
 int main() {
 #ifndef ONLINE_JUDGE 
-   freopen("input.txt","r",stdin);
-   freopen("output.txt","w",stdout);
+    freopen("Error1.txt", "w", stderr); 
+freopen("input.txt", "r", stdin);
+freopen("output.txt", "w", stdout);
 #endif 
     fastio();  
 
@@ -78,7 +96,7 @@ int main() {
     while(t--) { 
         solution(); 
     } 
-    //solution();
+   // solution();
 
     return 0;
 }

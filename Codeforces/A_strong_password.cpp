@@ -1,6 +1,7 @@
 /***************************  DEEPESH AHIRWAR *********************************/ 
 
 #include<bits/stdc++.h>
+#include <fstream>
 
 using namespace std; 
 
@@ -56,18 +57,61 @@ template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i
  
 /*************************** MY CP TAMPLATE END HERE *************************/
 void solution(){
+  string s; 
+  cin>>s;   
   
-  int num1,num2;
-  cin>>num1>>num2; 
-  cout<<max(num1,num2)<<endl;
- 
+  vector<int>count(26, 0); 
+
+  int n = s.size(); 
+  if(n== 1){
+    s += s[0]+1; 
+    reverse_all(s);
+    cout<<s<<endl;
+    return;
+  } 
+
+  for(int i=0; i<n; i++){
+    count[s[i]-'a']++;
+  }  
+      int idx1 =0, idx2 =0;
+  for(int i=n-1; i>0; i--){
+    if(s[i] == s[i-1]){  
+      idx1 = i;   
+      idx2 = i-1;  
+      break;    
+    } 
+
+  }  
+
+  char ch = s[idx1-1]; 
+  for(int i=0; i<26; i++){
+      if(count[i] == 0){
+          ch = 'a' + i;
+          break;
+      }
+  }
+
+  string ans =""; 
+  for(int i=0; i<idx1; i++){
+    ans += s[i];
+  }  
+  ans += ch;
+
+  for(int i=idx1; i<n; i++){
+    ans += s[i];   
+    } 
+
+     cout<<ans<<endl;
+
+
 
 } 
 
 int main() {
 #ifndef ONLINE_JUDGE 
-   freopen("input.txt","r",stdin);
-   freopen("output.txt","w",stdout);
+    freopen("Error1.txt", "w", stderr); 
+freopen("input.txt", "r", stdin);
+freopen("output.txt", "w", stdout);
 #endif 
     fastio();  
 

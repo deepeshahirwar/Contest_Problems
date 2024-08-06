@@ -1,6 +1,7 @@
 /***************************  DEEPESH AHIRWAR *********************************/ 
 
 #include<bits/stdc++.h>
+#include <fstream>
 
 using namespace std; 
 
@@ -56,18 +57,18 @@ template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i
  
 /*************************** MY CP TAMPLATE END HERE *************************/
 void solution(){
-  
-  int num1,num2;
-  cin>>num1>>num2; 
-  cout<<max(num1,num2)<<endl;
- 
+  int n; 
+  cin>>n; 
+  int ans = (n/10)+(n%10); 
+  cout<<ans<<endl;
 
 } 
 
 int main() {
 #ifndef ONLINE_JUDGE 
-   freopen("input.txt","r",stdin);
-   freopen("output.txt","w",stdout);
+    freopen("Error1.txt", "w", stderr); 
+freopen("input.txt", "r", stdin);
+freopen("output.txt", "w", stdout);
 #endif 
     fastio();  
 
