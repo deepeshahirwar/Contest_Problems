@@ -1,10 +1,12 @@
 /******************  DEEPESH AHIRWAR ****************/ 
 
-#include<bits/stdc++.h>
+#include<bits/stdc++.h> 
+#include <cstddef>
+
 
 using namespace std; 
 
-#define fastio() ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+
 #define MOD 1000000007
 #define MOD1 998244353
 #define INF 1e18
@@ -61,15 +63,19 @@ void solution(){
      vector<ll>a(n); 
      for( ll i=0; i<n; ++i){
       cin>>a[i];
-     }  
+     }   
+     
 //   debug(a);
 } 
 
 int main() {
 #ifndef ONLINE_JUDGE 
     freopen("Error1.txt", "w", stderr); 
-#endif 
-fastio();  
+#endif  
+
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+cout.tie(NULL);
 
 /********** YOUR CODE START HERE  ***********/
   
