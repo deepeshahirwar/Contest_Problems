@@ -30,25 +30,19 @@
       int n; 
       cin>>n; 
       vector<int>a(n);
-      //unordered_set<int>st; 
+      unordered_map<int,int>m; 
       for(int i=0; i<n; i++){
-        cin>>a[i];
-        
+        cin>>a[i]; 
+        m[a[i]]++;
       }  
-      vector<int>h(n+10, 0); 
-      for(auto it : a)h[it]++; 
-      int c =0; 
-      for(int i=1; i<=n; i++)c+=(h[i]==1); 
+      int cnt =0; 
+      for(auto it: m){
+        if(it.second == 1)cnt++;
+      }  
 
-      int alice = 2*(c/2 + (c&1));
-      for(int i=2; i<=n;i++){
-        c =0; 
-        for(int j=1; j<=n; j++){
-            if(h[j] == i)c++;
-        }
-        alice += c;
-      }
-   cout<<alice<<endl;
+      ll ans = m.size()+(((cnt+1)/2)-(cnt/2));
+      cout<<ans<<endl;
+      
   } 
 
  int main() {

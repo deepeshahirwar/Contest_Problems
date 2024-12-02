@@ -35,19 +35,21 @@
         cin>>a[i];
       } 
       sort(a.rbegin(), a.rend()); 
+     vector<int>pr(n); 
+     pr[0] = a[0]; 
+     for(int i=1; i<n; i++){
+            pr[i] = pr[i-1]+a[i];
+     }  
+     ll sum =0;
+      for(int i=0; i<n; i++){
+            if(pr[i] <= k){
+              sum = pr[i];
+            }else{
+              break;
+            }
+     } 
+   cout<<k-sum<<endl;
      
-      ll curr =0,add =0, i=0;
-     while(i<n){
-          if(k>= a[i])k-= a[i++];
-          else break; 
-
-          if(k ==0){
-            cout<<0<<endl; 
-            return;
-          }
-     }
-     
-      cout<<k<<endl;
   } 
 
  int main() {
