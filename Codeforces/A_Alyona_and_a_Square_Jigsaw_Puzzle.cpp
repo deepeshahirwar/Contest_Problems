@@ -2,7 +2,9 @@
 using namespace std;
 
 #define fastio() ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-
+/*  the problem is says: count the number of odd numbers square , given numbers sum is form 
+ 1 , 9, 25, 49,  so on ...
+*/
 void solution() {
     int n; 
     cin >> n; 
@@ -10,31 +12,17 @@ void solution() {
     vector<int> a(n);  
     for (int i = 0; i < n; i++) {
         cin >> a[i]; 
+    }  
+    int sum =0; 
+    int happy=0;
+    for(int i=0, j=1; i<n; i++){
+        sum += a[i]; 
+        while(j*j < sum) j+=2;// getting odds nums
+        happy += (j*j == sum);
     }
+  cout<<happy<<endl;
 
-    int happy_days = 0;
-    int total_pieces = 0; 
-    int layer = 0;
-    int pieces_in_current_layer = 1;
-
-    for (int i = 0; i < n; i++) {
-        total_pieces += a[i]; 
-
-        vector<int>pr(n); 
-        pr[0] = a[0]; 
-        for(int i=1; i<n; i++){
-            pr[i] = pr[i-1]+a[i];
-        }
-        int idx =0; 
-        while (total_pieces >= pieces_in_current_layer) {
-            if(pr[i] == pieces_in_current_layer)
-            happy_days++;
-            layer++; 
-            pieces_in_current_layer = 1 + (8 * layer); 
-        }
-    } 
-    if(total_pieces == pieces_in_current_layer)happy_days++;
-    cout << happy_days << endl;
+   
 }
 
 int main() {

@@ -27,57 +27,29 @@
 
 /*************** WELCOME *******************/
   void solution(){
-     int n;
-    cin >> n;
-    string s; 
-    cin >> s;
+      int n; 
+      cin>>n; 
+      vector<int>p(n),q(n); 
+      for(int i=0; i<n; i++){
+        cin>>p[i];
+      } 
+      if(n == 1){
+        cout<<1<<endl; 
+        return;
+      }  
+      // rotate left by 1 position  
+      for(int i=1; i<n; i++){
+        cout<<p[i]<<" ";
+      }
+      cout<<p[0]<<endl;
 
-    vector<int> freq(26, 0); 
-
-   
-    for (char c : s) {
-        freq[c - 'a']++;
-    }
-
-    int mxf = 0, mnf = INT_MAX; 
-    char chmx = 'a', chmn = 'a'; 
-
-    // find the characters with max and min frequencies
-    for (int i = 0; i < 26; i++) {
-        if (freq[i] > mxf) {
-            mxf = freq[i];
-            chmx = 'a' + i;
-        }
-        if (freq[i] > 0 && freq[i] < mnf) {
-            mnf = freq[i];
-            chmn = 'a' + i;
-        }
-    }
-    // if mnf == mxf 
-    if(mnf == mxf){
-     for (int i = 0; i < n-1; i++) {
-        if (s[i] != s[i+1]) {
-            s[i] = s[i+1];
-            break; 
-        }
-    }  
-    }else{ 
-        // if mnf != mxf
-    for (int i = 0; i < n; i++) {
-        if (s[i] == chmn && freq[s[i]-'a'] == mnf) {
-            s[i] = chmx;
-            break; 
-        }
-    } 
-    }
-
-    cout << s << endl;
   } 
 
  int main() {
  #ifndef ONLINE_JUDGE 
     freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("output.txt", "w", stdout); 
+    freopen("Error.txt", "w", stderr);
  #endif  
 fastio();    
 

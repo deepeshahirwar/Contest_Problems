@@ -1,10 +1,9 @@
-/***************************  DEEPESH AHIRWAR *********************************/ 
+/***************************  deepesh7024 *********************************/ 
 
 #include<bits/stdc++.h>
-
 using namespace std; 
 
-#define fastio() ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+#define fastIO() ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 #define MOD 1000000007
 #define MOD1 998244353
 #define INF 1e18
@@ -26,7 +25,8 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
-typedef long double lld;
+typedef long double lld; 
+
 
 
 #ifndef ONLINE_JUDGE
@@ -43,6 +43,7 @@ void _print(lld t) {cerr << t;}
 void _print(double t) {cerr << t;}
 void _print(ull t) {cerr << t;}
 
+
 template <class T, class V> void _print(pair <T, V> p);
 template <class T> void _print(vector <T> v);
 template <class T> void _print(set <T> v);
@@ -54,31 +55,25 @@ template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i
 template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
  
-/*************************** MY CP TAMPLATE END HERE *************************/
-void solution(){
+/*************************** WElCOME **********************************************/
+void deepesh7024(){
   
-  int num1,num2;
-  cin>>num1>>num2; 
-  cout<<max(num1,num2)<<endl;
- 
-
-} 
-
+     int a = 10; 
+     int b = 20; 
+     int sum  = a+b; 
+     debug(sum);
+}  
+/**********************************************************************/
 int main() {
 #ifndef ONLINE_JUDGE 
-   freopen("input.txt","r",stdin);
-   freopen("output.txt","w",stdout);
+  //  freopen("input.txt","r",stdin);
+  //  freopen("output.txt","w",stdout); 
+   freopen("Error.txt", "w", stderr);
 #endif 
-    fastio();  
-
-    /********** YOUR CODE START HERE  ***********/
+    fastIO();  
+   ll t=1; 
+   //cin>>t;  
+   for(int i=0;i<t;i++){ deepesh7024();}  
     
-    ll t; 
-    cin >> t; 
-    while(t--) { 
-        solution(); 
-    } 
-    //solution();
-
     return 0;
 }
