@@ -58,12 +58,10 @@ template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i
 /*************************** WElCOME **********************************************/
 void deepesh7024(){
   
-     int a = 10; 
-     int b = 20; 
-     int sum  = a+b; 
-     debug(sum);
+     
+ 
 }  
-/**********************************************************************/
+ 
 int main() {
 #ifndef ONLINE_JUDGE 
   //  freopen("input.txt","r",stdin);
