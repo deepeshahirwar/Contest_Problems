@@ -27,7 +27,9 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 typedef long double lld;
+ 
 
+ 
 
 #ifndef ONLINE_JUDGE
 #define debug(x) cerr << #x <<" "; _print(x); cerr << endl;
