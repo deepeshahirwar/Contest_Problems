@@ -35,7 +35,10 @@ typedef long double lld;
 #define debug(x)
 #endif
 
-void _print(ll t) {cerr << t;}
+void _print(ll t) {cerr << t;} 
+
+
+
 void _print(int t) {cerr << t;}
 void _print(string t) {cerr << t;}
 void _print(char t) {cerr << t;}
@@ -71,7 +74,7 @@ void deepesh7024(){
            break;
          }  
         }
-         
+    
          if(ok)
          cout<<"Yes"; 
          else 
@@ -81,7 +84,9 @@ void deepesh7024(){
 }  
  
 int main() {
-#ifndef ONLINE_JUDGE 
+#ifndef ONLINE_JUDGE  
+
+
    freopen("input.txt","r",stdin);
    freopen("output.txt","w",stdout); 
    freopen("Error.txt", "w", stderr);
