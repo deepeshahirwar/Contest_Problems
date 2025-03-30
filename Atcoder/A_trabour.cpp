@@ -91,7 +91,9 @@ int main() {
    freopen("output.txt","w",stdout); 
    freopen("Error.txt", "w", stderr);
 #endif 
-    fastIO();  
+    fastIO();   
+
+    
    ll t=1; 
    //cin>>t;  
    for(int i=0;i<t;i++){ deepesh7024();}  
